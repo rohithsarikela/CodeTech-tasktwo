@@ -1,3 +1,11 @@
+Name:SARIKELA ROHITH 
+Company:CODETECH IT SOLUTIONS
+ID:CT12DS2644 
+Domain:web development 
+Duration:OCT-DEC 2025
+
+
+
 Sunrise Avenue Website
 Overview
 The Sunrise Avenue project is a fully responsive, interactive website showcasing a selection of apartments. The website provides users with an engaging way to explore different flat options, view details, and navigate between sections seamlessly. It highlights modern web design principles and interactive JavaScript functionalities for a smooth user experience.
