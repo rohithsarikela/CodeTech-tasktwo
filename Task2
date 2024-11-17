@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunrise Avenue</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            font-family: 'Bree Serif', serif;
+        }
+
+        .main-photo {
+            background-image: url("https://assets.ccbp.in/frontend/static-website/flats-list-bg.png");
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .main-heading {
+            color: #f19116;
+            font-size: 3rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px #00000080;
+        }
+
+        .main-paragraph {
+            color: #333;
+            font-size: 1.2rem;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .button {
+            padding: 10px 30px;
+            background-color: #f19116;
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 30px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #ff7f11;
+        }
+
+        .background-one,
+        .background-two {
+            padding: 50px 20px;
+        }
+
+        .background-one {
+            background-color: #ffffff;
+            text-align: center;
+        }
+
+        .background-two {
+            background-color: #222222;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .two-insidebackground {
+            background-color: #ffffff;
+            border-radius: 20px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 80%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .two-insidebackground:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .secound-photo {
+            height: 150px;
+            width: 150px;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+
+        .secound-heading {
+            font-size: 1.5rem;
+            color: #f19116;
+        }
+
+        .secound-paragraph {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .third-photo {
+            width: 90%;
+            height: auto;
+            margin: 20px auto;
+            border-radius: 15px;
+        }
+
+        .four-photo {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .four-paragraph {
+            font-size: 1rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .main-photo,
+        .two-insidebackground {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Section One -->
+    <div id="sectionone">
+        <div class="main-photo">
+            <h1 class="main-heading">SUNRISE AVENUE</h1>
+            <p class="main-paragraph">Move where you want to move</p>
+            <button class="button" onclick="display('sectiontwo')">Book Flat</button>
+        </div>
+    </div>
+
+    <!-- Section Two -->
+    <div id="sectiontwo" class="background-two" style="display: none;">
+        <h1 class="main-heading">Explore Flats</h1>
+        <div class="two-insidebackground" onclick="display('sectionthree')">
+            <img src="https://assets.ccbp.in/frontend/static-website/flats-list-card1-img.png" class="secound-photo" alt="3BHK Flat">
+            <div>
+                <h2 class="secound-heading">3BHK FLAT</h2>
+                <p class="secound-paragraph">This is a fully furnished house with decorative items and handmade furniture.</p>
+            </div>
+        </div>
+        <div class="two-insidebackground" onclick="display('sectionfour')">
+            <img src="https://assets.ccbp.in/frontend/static-website/flats-list-card2-img.png" class="secound-photo" alt="2BHK Flat">
+            <div>
+                <h2 class="secound-heading">2BHK FLAT</h2>
+                <p class="secound-paragraph">Experience luxury and comfort with exquisite interiors and premium furniture.</p>
+            </div>
+        </div>
+        <div class="two-insidebackground" onclick="display('sectionfive')">
+            <img src="https://assets.ccbp.in/frontend/static-website/flats-list-card3-img.png" class="secound-photo" alt="1BHK Flat">
+            <div>
+                <h2 class="secound-heading">1BHK FLAT</h2>
+                <p class="secound-paragraph">A cozy and elegant home, perfect for singles or couples starting their journey.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section Three: 3BHK Flat Details -->
+    <div id="sectionthree" class="background-one" style="display: none;">
+        <img src="https://assets.ccbp.in/frontend/static-website/flats-list-d1-img.png" class="third-photo" alt="3BHK Flat Details">
+        <h1 class="main-heading">RS 5500/-</h1>
+        <p class="main-paragraph">2-105, Kondapur, Hyderabad</p>
+        <p class="main-paragraph">East-facing flat with north-side bedrooms and south-side kitchen.</p>
+        <button class="button" onclick="display('sectiontwo')">Back</button>
+    </div>
+
+    <!-- Section Four: 2BHK Flat Details -->
+    <div id="sectionfour" class="background-one" style="display: none;">
+        <img src="https://assets.ccbp.in/frontend/static-website/flats-list-d2-img.png" class="third-photo" alt="2BHK Flat Details">
+        <h1 class="main-heading">RS 4500/-</h1>
+        <p class="main-paragraph">14-210, Gachibowli, Hyderabad</p>
+        <p class="main-paragraph">Spacious 2BHK flat with a balcony, modular kitchen, and ample natural light.</p>
+        <button class="button" onclick="display('sectiontwo')">Back</button>
+    </div>
+
+    <!-- Section Five: 1BHK Flat Details -->
+    <div id="sectionfive" class="background-one" style="display: none;">
+        <img src="https://assets.ccbp.in/frontend/static-website/flats-list-d3-img.png" class="third-photo" alt="1BHK Flat Details">
+        <h1 class="main-heading">RS 3000/-</h1>
+        <p class="main-paragraph">8-15, Miyapur, Hyderabad</p>
+        <p class="main-paragraph">Compact 1BHK flat with a cozy layout, perfect for singles or small families.</p>
+        <button class="button" onclick="display('sectiontwo')">Back</button>
+    </div>
+</body>
+
+
+<script>
+    function display(sectionId) {
+        document.querySelectorAll('div[id^="section"]').forEach((section) => {
+            section.style.display = "none";
+        });
+        document.getElementById(sectionId).style.display = "block";
+    }
+    document.getElementById('sectionone').style.display = "block";
+</script>
+
+</html>
